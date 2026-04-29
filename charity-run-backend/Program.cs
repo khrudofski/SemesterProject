@@ -517,8 +517,6 @@ app.MapGet("/test", () => Results.Content("""
 </html>
 """, "text/html"));
 
-app.Run();
-
 static List<string> ValidateRegistration(RegisterRequest request, List<Runner> existingRunners)
 {
     var errors = new List<string>();
