@@ -22,11 +22,11 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
-app.UseCors();
+app.UseCors("AllowFrontend");
 
 
 
-var dataFile = Path.Combine(AppContext.BaseDirectory, "runners.json");
+var dataFile = "/data/runners.json"; 
 var store = new RunnerStore(dataFile);
 await store.LoadAsync();
 await store.EnsureSeedDataAsync();
