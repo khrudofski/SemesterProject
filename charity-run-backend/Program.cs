@@ -28,18 +28,19 @@ var sessions = new ConcurrentDictionary<string, int>();
 
 var charityInfo = new CharityInfo(
     CharityName: "Supply the Spark",
-    Description: "A fictitious nonprofit raising money for artist and graphic designer supplies.",
+    Description: "Supply the Spark is a non-profit organization dedicated to supporting artists and designers\r\n                    through their creative journey by providing them with the supplies they need to share their\r\n                    talent with the world. Artists and designers of all ages deserve the opportunity to share their\r\n                    art, but not everyone has the resources. Supply the Spark provides all kinds of supplies depending\r\n                    on what the artist or designer needs, from colored pencils and sketchbooks to paint and canvases.",
     RaceDate: "2026-06-19",
     Location: "East Walnut Street",
     Distance: "5K",
-    PublicAnnouncement: "Join us for a community 5K to support local students.");
+    PublicAnnouncement: "The next fundraising event for Supple the Spark is the Creative Stride 5K. The race will take place on East\r\n                    Walnut St in Charleston, South Carolina on June 19, 2026. Register for the event now to support local artists\r\n                    and designers!");
 
 var publicRaceInfo = new PublicRaceInfo(
     RaceDate: "2026-06-19",
-    Location: "East Walnut Street",
+    Location: "East Walnut Street, Charleston, SC",
     Distance: "5K",
     StartTime: "12:00 PM",
-    RegistrationNote: "Online registration is open until race week. No payment is collected in this demo project.");
+    RegistrationNote: "Register now for The Creative Stride 5K in Charleston, South Carolina. This event supports local artists and designers by providing essential creative supplies."
+);
 
 var privateRaceInfo = new PrivateRaceInfo(
     RaceDate: "2026-06-19",
@@ -50,11 +51,12 @@ var privateRaceInfo = new PrivateRaceInfo(
 
 var schedule = new List<ScheduleItem>
 {
-    new("7:00 AM", "Check-in Opens", "Registered runners can check in and pick up race materials."),
-    new("8:00 AM", "Warm-up Session", "Group stretching and race reminders."),
-    new("8:30 AM", "Race Starts", "The 5K begins at the park entrance."),
-    new("9:30 AM", "Refreshments", "Water, fruit, and snacks available near the finish area."),
-    new("10:00 AM", "Closing Remarks", "Thank-you message and charity update from organizers.")
+    new("June 1", "Registration Opens", "Sign up begins for all participants."),
+    new("June 19 - 11:00 AM", "Check-in", "Runners check in and receive race materials."),
+    new("June 19 - 12:00 PM", "Race Start", "The Creative Stride 5K officially begins."),
+    new("June 19 - 1:00 PM", "Race End", "Runners begin finishing the race."),
+    new("June 19 - 1:30 PM", "Live Art Showcase", "Local artists showcase their work."),
+    new("June 19 - 3:00 PM", "Awards & Artist Spotlight", "Recognition and closing ceremony.")
 };
 
 app.MapGet("/", () => Results.Ok(new
