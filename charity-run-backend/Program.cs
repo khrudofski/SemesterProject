@@ -517,6 +517,9 @@ app.MapGet("/test", () => Results.Content("""
 </html>
 """, "text/html"));
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://0.0.0.0:{port}");
+
 static List<string> ValidateRegistration(RegisterRequest request, List<Runner> existingRunners)
 {
     var errors = new List<string>();
@@ -746,6 +749,3 @@ static class PasswordHelper
         return CryptographicOperations.FixedTimeEquals(expectedHash, actualHash);
     }
 }
-
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Run($"http://0.0.0.0:{port}");
