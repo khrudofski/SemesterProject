@@ -4,8 +4,6 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 
 var builder = WebApplication.CreateBuilder(args);
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-
 
 builder.Services.AddCors(options =>
 {
@@ -18,7 +16,6 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-app.Run("http://0.0.0.0:8080");
 app.UseCors();
 
 
