@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-app.Run();
+app.Run("http://0.0.0.0:8080");
 app.UseCors();
 
 
@@ -751,3 +751,6 @@ static class PasswordHelper
         return CryptographicOperations.FixedTimeEquals(expectedHash, actualHash);
     }
 }
+
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://0.0.0.0:{port}");
