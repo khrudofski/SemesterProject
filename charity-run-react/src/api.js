@@ -1,6 +1,6 @@
 // STUDENT NOTE:
 // Change this value if your backend runs on a different port.
-export const API_BASE = 'https://supply-the-spark-fly.dev'
+export const API_BASE = ''
 
 export async function getJson(path, token) {
   const response = await fetch(`${API_BASE}${path}`, {

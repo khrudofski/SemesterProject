@@ -16,7 +16,10 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.UseCors();
+
 
 
 var dataFile = Path.Combine(AppContext.BaseDirectory, "runners.json");
@@ -518,6 +521,8 @@ app.MapGet("/test", () => Results.Content("""
 </body>
 </html>
 """, "text/html"));
+
+app.MapFallbackToFile("index.html");
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 app.Run($"http://0.0.0.0:{port}");
