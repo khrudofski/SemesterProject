@@ -165,12 +165,13 @@ async function removeAdmin(id) {
     if (!confirmAction) return;
 
     try { 
-        const res = await fetch(`${API_BASE}/api/admin/runners/${id}/remove-admin`) , {
+        const res = await fetch(`${API_BASE}/api/admin/runners/${id}/remove-admin`, {
             method: "POST",
-            headers: { "Content-Type": "application/json",
-                        Authorization: `Bearer ${token}` },
-    }
-    );
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`
+            }
+        });
     
     let data = {};
     try {
