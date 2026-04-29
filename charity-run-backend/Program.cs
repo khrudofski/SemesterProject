@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 var builder = WebApplication.CreateBuilder(args);
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Run($"http://0.0.0.0:{port}");
+
 
 builder.Services.AddCors(options =>
 {
@@ -18,9 +18,12 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+app.Run();
 app.UseCors();
 
+
 var dataFile = Path.Combine(AppContext.BaseDirectory, "runners.json");
+var store = new RunnerStore(dataFile);
 await store.LoadAsync();
 await store.EnsureSeedDataAsync();
 
