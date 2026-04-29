@@ -1,0 +1,35 @@
+[
+  {
+    "Id": 1,
+    "Name": "Admin Runner",
+    "Email": "admin@example.com",
+    "Age": 30,
+    "EmergencyPhone": "555-111-2222",
+    "PasswordHash": "BiuB6mYOf57kD/G/oWeICA==.RlNOgx1rkdjYemFrbys57a70Z1oJGeh2d0ZR\u002BGYXnGM=",
+    "TeamName": "FastFeet",
+    "IsAdmin": true,
+    "CreatedAt": "2026-03-14T23:51:22.2330777Z"
+  },
+  {
+    "Id": 2,
+    "Name": "Sample Runner",
+    "Email": "runner@example.com",
+    "Age": 22,
+    "EmergencyPhone": "555-333-4444",
+    "PasswordHash": "8Xv37QKuNkx/4eactLMP7w==.UdVx8m/kJR4dARY7OnSSfd7Kj1C1s\u002BUtnDKrl3L3qbo=",
+    "TeamName": "FastFeet",
+    "IsAdmin": false,
+    "CreatedAt": "2026-03-14T23:51:22.2519103Z"
+  },
+  {
+    "Id": 3,
+    "Name": "Jonathan Zheng Sun",
+    "Email": "jonathanzsun@gmail.com",
+    "Age": 4,
+    "EmergencyPhone": "8438988101",
+    "PasswordHash": "HYQspBdMOz4Qqb4yVwjuCA==.YXFGuKYnFnYSAGRKD0G3RuSOne4XHDKzy8Sl/2Uacm0=",
+    "TeamName": null,
+    "IsAdmin": false,
+    "CreatedAt": "2026-03-15T21:58:44.1150225Z"
+  }
+]
