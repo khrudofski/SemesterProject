@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { API_BASE } from './api'
 import { useRef } from 'react' // for the message timer
 // Asset images used in the UI
 import logo from './assets/logo.png'
